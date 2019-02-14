@@ -1,11 +1,10 @@
-const path = require('path')
-const express = require('express')
+var path = require("path");
+var express = require("express");
+var bodyParser = require("body-parser");
 
-const redditRoutes = require('./reddit')
-const server = express()
+var server = express();
 
-server.use(express.static(path.join(__dirname, '../public')))
+server.use(bodyParser.json());
+server.use(express.static(path.join(__dirname, "../public")));
 
-server.use('/api/v1/reddit', redditRoutes)
-
-module.exports = server
+module.exports = server;

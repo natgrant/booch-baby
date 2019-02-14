@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Header from "./Header";
 import MainNav from "./MainNav";
+import boochData from "../../data/booch";
 
 const App = props => {
   return (
