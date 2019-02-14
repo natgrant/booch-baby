@@ -46,7 +46,9 @@ class BoochNavbar extends Component {
 
           <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-start">
-              <a className="navbar-item">Home</a>
+              <a className="navbar-item" href="/">
+                Home
+              </a>
               <a className="navbar-item" onClick={this.handleChange}>
                 About
               </a>
