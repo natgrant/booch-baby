@@ -1,39 +1,32 @@
-import request from 'superagent'
+export const ADD_TO_CART = "ADD_TO_CART";
+export const DELETE_FROM_CART = "DELETE_FROM_CART";
+export const UPDATE_CART = "UPDATE_CART";
+export const NAVIGATE = "NAVIGATE";
 
-export const SHOW_ERROR = 'SHOW_ERROR'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-
-export const requestPosts = () => {
+export const addToCart = id => {
   return {
-    type: REQUEST_POSTS
-  }
-}
+    type: "ADD_TO_CART",
+    id
+  };
+};
 
-export const receivePosts = (posts) => {
+export const deleteFromCart = id => {
   return {
-    type: RECEIVE_POSTS,
-    posts: posts.map(post => post.data)
-  }
-}
+    type: "DELETE_FROM_CART",
+    id
+  };
+};
 
-export const showError = (errorMessage) => {
+export const updateCart = cart => {
   return {
-    type: SHOW_ERROR,
-    errorMessage: errorMessage
-  }
-}
+    type: UPDATE_CART,
+    cart
+  };
+};
 
-export function fetchPosts (subreddit) {
-  return (dispatch) => {
-    dispatch(requestPosts())
-    return request
-      .get(`/api/v1/reddit/subreddit/${subreddit}`)
-      .then(res => {
-        dispatch(receivePosts(res.body))
-      })
-      .catch(err => {
-        dispatch(showError(err.message))
-      })
-  }
-}
+export const navigate = destination => {
+  return {
+    type: "NAVIGATE",
+    destination
+  };
+};

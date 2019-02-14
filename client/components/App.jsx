@@ -1,17 +1,14 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import ErrorMessage from "./ErrorMessage";
-import LoadSubreddit from "./LoadSubreddit";
-import SubredditList from "./SubredditList";
-import WaitIndicator from "./WaitIndicator";
+const App = props => {
+  return <div className="app" />;
+};
 
-const App = () => (
-  <div className="app">
-    <ErrorMessage />
-    <LoadSubreddit />
-    <WaitIndicator />
-    <SubredditList />
-  </div>
-);
+const mapStateToProps = state => {
+  return {
+    currentPage: state.currentPage
+  };
+};
 
-export default App;
+export default connect(mapStateToProps)(App);
