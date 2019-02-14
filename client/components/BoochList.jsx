@@ -1,12 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
 
-import BoochListItem from './BoochListItem'
+import BoochListItem from "./BoochListItem";
+
 
 class BoochList extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = { 
+  constructor(props) {
+    super(props);
+    this.state = {
       kombucha: [
         {
           id: 1,
@@ -97,19 +98,35 @@ class BoochList extends React.Component {
           image: ""
         }
       ]
-    } 
+    };
   }
-  render(){
-  return (<div className='columns'>
-    {this.state.kombucha.map((item,i)=>{
-      return( <BoochListItem key= {i} details={item}/>)
-    })}
-  </div>)
-};
+  render() {
+    return (
+      <Fragment>
+        {this.state.kombucha.map((item, i) => {
+          if ((i - 1) % 3 == 0) {
+            return (
+              <Fragment>
+              <div className="columns">
+                <BoochListItem key={i} details={item} />
+                </Fragment>
+            )
+          } else if {
+            (i % 3 == 0) {
+              return (
+                <BoochListItem key={i} details={item} />;
+                </div>
+              )
+            }
+          }
+        })}
+      </Fragment>
+    );
+  }
 }
 
 const mapStateToProps = state => {
-  return ;
+  return;
 };
 
 export default connect(mapStateToProps)(BoochList);
