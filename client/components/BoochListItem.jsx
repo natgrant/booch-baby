@@ -4,6 +4,7 @@ const BoochListItem = props => {
   const details = props.details;
   return(
     <div className='column'>
+    <img src='./images/kombucha.jpg'></img>
     <h5>{details.name}</h5>
     <p>{details.description}</p>
     <p>Size: {details.size}</p>
