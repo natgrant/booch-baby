@@ -43,15 +43,17 @@ class BoochList extends Component {
         {this.state.kombucha.map((item, idx) => {
           if ((idx - 1) % 3 == 0) {
             return (
-              <div className="columns">
+              <Fragment>
+                {/* <div className="columns"> */}
                 <BoochListItem key={idx} details={item} />
-              </div>
+              </Fragment>
             );
           } else if (idx % 3 == 0) {
             return (
-              <div>
+              <Fragment>
                 <BoochListItem key={idx} details={item} />
-              </div>
+                {/* </div> */}
+              </Fragment>
             );
           }
         })}
