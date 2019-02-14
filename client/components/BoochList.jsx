@@ -39,26 +39,24 @@ class BoochList extends Component {
 
   render() {
     return (
-    <Fragment>
-      {this.state.kombucha.map((item, idx) => {
-        if((idx - 1) % 3 == 0) {
-          return (
-            <div className="columns">
-            <BoochListItem key={idx} details={item}/>
-            </div>
-          ) 
-          } else if(i % 3 == 0) {
+      <Fragment>
+        {this.state.kombucha.map((item, idx) => {
+          if ((idx - 1) % 3 == 0) {
+            return (
+              <div className="columns">
+                <BoochListItem key={idx} details={item} />
+              </div>
+            );
+          } else if (idx % 3 == 0) {
             return (
               <div>
-              <BoochListItem key={i} details={item} />
+                <BoochListItem key={idx} details={item} />
               </div>
-            )
+            );
           }
-        }
-        }
-      })}
-    </Fragment>
-    )
+        })}
+      </Fragment>
+    );
   }
 }
 
