@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const BoochList = props => {
-  return;
+  return <h1>Hey</h1>;
 };
 
 const mapStateToProps = state => {
