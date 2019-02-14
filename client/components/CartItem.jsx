@@ -1,6 +1,6 @@
 import React from "react";
 
-import boochData from "../..data/beers";
+import boochData from "../../data/booch";
 
 const CartItem = props => {
   const name = getNameFromId(props.item.id);
