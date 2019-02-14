@@ -1,6 +1,6 @@
 # GROUP PROJECT WEEK 6 - BOOCH BABY
 
-## Vision (Why am we building this?)
+## Vision (Why are we building this?)
 
 To solidify our learnings over the past six weeks
 
@@ -22,7 +22,7 @@ To solidify our learnings over the past six weeks
 
 - [x] Setup boilerplate
 - [x] Commit to GitHub
-- [ ] Deploy to Heroku
+- [ ] Deploy to Heroku - https://booch-baby.herokuapp.com/
 - [ ] Create components and reducers
 - [ ] Present to class
 
