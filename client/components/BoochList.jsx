@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import { connect } from "react-redux";
-import boochData from "../../data/booch";
+import { addToCart, navigate } from "../actions";
 
 import BoochListItem from "./BoochListItem";
 
@@ -69,4 +69,16 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(BoochList);
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: id => {
+      dispatch(addToCart(id));
+      dispatch(navigate("cart"));
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BoochList);
