@@ -1,6 +1,17 @@
-$background-color: #ffebe6;
+// Variables for style:
+$font-header: "Pacifico";
+$font-body: "Open Sans";
+
+$color-background: #ffebe6;
 
 html,
 body {
-  background-color: $background-color;
+  background-color: $color-background;
+}
+
+h1 {
+  font-family: $font-header;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
 }
