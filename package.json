@@ -4,9 +4,9 @@
   "description": "React Redux with simple async action",
   "main": "server/index",
   "scripts": {
-    "dev": "nodemon --watch server & webpack --watch",
+    "dev": "nodemon --watch server",
     "test": "jest --watchAll",
-    "start": "webpack && node server",
+    "start": "webpack --watch",
     "postinstall": "webpack"
   },
   "author": "EDA",
