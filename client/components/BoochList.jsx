@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from "react";
 import { connect } from "react-redux";
+import boochData from "../../data/booch";
 
 import BoochListItem from "./BoochListItem";
 
