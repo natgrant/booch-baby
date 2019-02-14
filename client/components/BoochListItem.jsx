@@ -1,8 +1,15 @@
 import React from "react";
 
 const BoochListItem = props => {
-  const beer = props.beer;
-  return;
+  const details = props.details;
+  return(
+    <div className='column'>
+    <h5>{details.name}</h5>
+    <p>{details.description}</p>
+    <p>Size: {details.size}</p>
+    <p>${details.price}</p>
+    </div>
+  )
 };
 
 export default BoochListItem;
