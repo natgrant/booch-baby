@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
 import { connect } from "react-redux";
 
 import BoochListItem from "./BoochListItem";
 
-
-class BoochList extends React.Component {
+class BoochList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,100 +32,40 @@ class BoochList extends React.Component {
           size: "1 litre",
           price: 9.99,
           image: ""
-        },
-        {
-          id: 4,
-          name: "Lemon and Ginger",
-          description:
-            "Kombucha with organic lemon and ginger, great for summer or winter",
-          size: "500 ml",
-          price: 5.99,
-          image: ""
-        },
-        {
-          id: 5,
-          name: "Lemon and Ginger",
-          description:
-            "Kombucha with organic lemon and ginger, great for summer or winter",
-          size: "1 litre",
-          price: 9.99,
-          image: ""
-        },
-        {
-          id: 6,
-          name: "Chai Blend",
-          description:
-            "Kombucha with chai spices, including cinnamon, cardamom and turmeric",
-          size: "500 ml",
-          price: 5.99,
-          image: ""
-        },
-        {
-          id: 7,
-          name: "Chai Blend",
-          description:
-            "Kombucha with chai spices, including cinnamon, cardamom and turmeric",
-          size: "1 litre",
-          price: 9.99,
-          image: ""
-        },
-        {
-          id: 8,
-          name: "Very Berry Booch",
-          description:
-            "Strawberry and blackberry flavour is a must try, limited edition",
-          size: "500 ml",
-          price: 5.99,
-          image: ""
-        },
-        {
-          id: 9,
-          name: "Very Berry Booch",
-          description:
-            "Strawberry and blackberry flavour is a must try, limited edition",
-          size: "1 litre",
-          price: 9.99,
-          image: ""
-        },
-        {
-          id: 10,
-          name: "Floral Jasmine",
-          description:
-            "Kombucha blended with Jasmine and Green tea, a great alcohol replacement",
-          size: "1 litre",
-          price: 9.99,
-          image: ""
         }
       ]
     };
   }
+
   render() {
     return (
-      <Fragment>
-        {this.state.kombucha.map((item, i) => {
-          if ((i - 1) % 3 == 0) {
+    <Fragment>
+      {this.state.kombucha.map((item, idx) => {
+        if((idx - 1) % 3 == 0) {
+          return (
+            <div className="columns">
+            <BoochListItem key={idx} details={item}/>
+            </div>
+          ) 
+          } else if(i % 3 == 0) {
             return (
-              <Fragment>
-              <div className="columns">
-                <BoochListItem key={i} details={item} />
-                </Fragment>
+              <div>
+              <BoochListItem key={i} details={item} />
+              </div>
             )
-          } else if {
-            (i % 3 == 0) {
-              return (
-                <BoochListItem key={i} details={item} />;
-                </div>
-              )
-            }
           }
-        })}
-      </Fragment>
-    );
+        }
+        }
+      })}
+    </Fragment>
+    )
   }
 }
 
 const mapStateToProps = state => {
-  return;
+  return {
+    booch: state.booch
+  };
 };
 
 export default connect(mapStateToProps)(BoochList);
