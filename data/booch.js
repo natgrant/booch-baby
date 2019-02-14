@@ -7,7 +7,7 @@ export default {
         "An experimental blend of kombucha and coffee, using Peoples Coffee Beans",
       size: "500 ml",
       price: 5.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ export default {
       description: "Kombucha with organic blueberry and ginger",
       size: "500 ml",
       price: 5.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 3,
@@ -23,7 +23,7 @@ export default {
       description: "Kombucha with organic blueberry and ginger",
       size: "1 litre",
       price: 9.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ export default {
         "Kombucha with organic lemon and ginger, great for summer or winter",
       size: "500 ml",
       price: 5.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 5,
@@ -41,7 +41,7 @@ export default {
         "Kombucha with organic lemon and ginger, great for summer or winter",
       size: "1 litre",
       price: 9.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 6,
@@ -50,7 +50,7 @@ export default {
         "Kombucha with chai spices, including cinnamon, cardamom and turmeric",
       size: "500 ml",
       price: 5.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 7,
@@ -59,7 +59,7 @@ export default {
         "Kombucha with chai spices, including cinnamon, cardamom and turmeric",
       size: "1 litre",
       price: 9.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 8,
@@ -68,7 +68,7 @@ export default {
         "Strawberry and blackberry flavour is a must try, limited edition",
       size: "500 ml",
       price: 5.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 9,
@@ -77,7 +77,7 @@ export default {
         "Strawberry and blackberry flavour is a must try, limited edition",
       size: "1 litre",
       price: 9.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     },
     {
       id: 10,
@@ -86,7 +86,7 @@ export default {
         "Kombucha blended with Jasmine and Green tea, a great alcohol replacement",
       size: "1 litre",
       price: 9.99,
-      image: ""
+      image: "/images/kombucha.jpg"
     }
   ]
 };

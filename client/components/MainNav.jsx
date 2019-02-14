@@ -27,7 +27,7 @@ class BoochNavbar extends Component {
       <div className="main-nav">
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
-            <a className="navbar-item" href="#">
+            <a className="navbar-item" href="/">
               <img src="https://img.icons8.com/ios/50/000000/soda-bottle.png" />
             </a>
 
