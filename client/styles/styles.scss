@@ -3,10 +3,12 @@ $font-header: "Pacifico";
 $font-body: "Open Sans";
 
 $color-background: #ffebe6;
+$color-shop-font: #395267;
 
 html,
 body {
   background-color: $color-background;
+  font-family: $font-body;
 }
 
 h1 {
@@ -14,4 +16,18 @@ h1 {
   text-align: center;
   margin-top: 2rem;
   font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.shop-list {
+  padding: 2rem;
+}
+
+.description {
+  color: $color-shop-font;
+}
+
+.booch-image {
+  border: 2px;
+  border-color: black;
 }

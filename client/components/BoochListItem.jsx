@@ -3,12 +3,15 @@ import React from "react";
 const BoochListItem = props => {
   const details = props.item;
   return (
-    <div className="column">
-      <img src="./images/kombucha.jpg" />
-      <h5>{details.name}</h5>
+    <div className="column description">
+      <img src="./images/kombucha.jpg" class="booch-image" />
+      <h5>
+        <strong>{details.name}</strong>
+      </h5>
       <p>{details.description}</p>
-      <p>Size: {details.size}</p>
-      <p>${details.price}</p>
+
+      <p> <strong>Size: </strong> {details.size}</p>
+      <p><strong>Cost: </strong>${details.price}</p>
       <a
         href="#"
         className="cart-link"
