@@ -14,15 +14,15 @@ const CartItem = props => {
         />
       </td>
       <button onClick={() => props.deleteFromCart(props.item.id)}>
-        <span className="fa fa-trash fa-2x" />
+        <span className="delete" />
       </button>
       <td />
     </tr>
   );
 };
 
-function getNameFromID(id) {
-  const booch = boochData.booch.find(booch => booch.id === id);
+function getNameFromId(id) {
+  const booch = boochData.kombucha.find(booch => booch.id === id);
   return booch.name;
 }
 

@@ -10,7 +10,7 @@ const App = props => {
     <div className="app">
       <MainNav />
       <Header />
-      <BoochList />
+      {/* <BoochList /> */}
       {props.currentPage === "listing" ? <BoochList /> : <Cart />}
     </div>
   );

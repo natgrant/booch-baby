@@ -1,36 +1,33 @@
-import React, { Fragment, Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
+
 import { addToCart, navigate } from "../actions";
 
 import BoochListItem from "./BoochListItem";
 
-class BoochList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      kombucha: props.booch
-    };
-  }
 
-  render() {
-    return (
-      <Fragment>
-        <div className="columns shop-list">
-          {this.state.kombucha.map((item, idx) => {
-            if ((idx - 1) % 3 === 0) {
-              return <BoochListItem key={idx} details={item} />;
-            } else if (idx % 3 === 0) {
-              return <BoochListItem key={idx} details={item} />;
-            }
-          })}
-        </div>
-      </Fragment>
-    );
-  }
-}
+const BoochList = props => {
+  return (
+    <div>
+      <p>
+        Welcome! Please select from our delicious selection and don't hesitate
+        to let us know if we can answer any of your questions.
+      </p>
+      {props.booch.map(item => {
+        return (
+          <BoochListItem
+            key={item.id}
+            item={item}
+            addToCart={props.addToCart}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     booch: state.booch
   };
