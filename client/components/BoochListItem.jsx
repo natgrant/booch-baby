@@ -1,7 +1,7 @@
 import React from "react";
 
 const BoochListItem = props => {
-  const details = props.details;
+  const details = props.item;
   return (
     <div className="column description">
       <img src="./images/kombucha.jpg" class="booch-image" />
@@ -10,11 +10,19 @@ const BoochListItem = props => {
       </h5>
       <p>{details.description}</p>
       <p>
-        <strong>Size:</strong> {details.size}
+        <strong>Size:</strong>
+        {details.size}
       </p>
-      <p id="price">
+      <p>
         <strong>Cost: </strong>${details.price}
       </p>
+      <a
+        href="#"
+        className="cart-link"
+        onClick={() => props.addToCart(details.id)}
+      >
+        Add to cart
+      </a>
     </div>
   );
 };
