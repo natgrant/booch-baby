@@ -13,26 +13,17 @@ class BoochList extends Component {
   }
 
   render() {
-    console.log(this.state.kombucha);
     return (
       <Fragment>
-        {this.state.kombucha.map((item, idx) => {
-          if ((idx - 1) % 3 == 0) {
-            return (
-              <Fragment>
-                {/* <div className="columns"> */}
-                <BoochListItem key={idx} details={item} />
-              </Fragment>
-            );
-          } else if (idx % 3 == 0) {
-            return (
-              <Fragment>
-                <BoochListItem key={idx} details={item} />
-                {/* </div> */}
-              </Fragment>
-            );
-          }
-        })}
+        <div className="columns shop-list">
+          {this.state.kombucha.map((item, idx) => {
+            if ((idx - 1) % 3 === 0) {
+              return <BoochListItem key={idx} details={item} />;
+            } else if (idx % 3 === 0) {
+              return <BoochListItem key={idx} details={item} />;
+            }
+          })}
+        </div>
       </Fragment>
     );
   }

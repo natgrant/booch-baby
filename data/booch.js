@@ -11,7 +11,7 @@ export default {
     },
     {
       id: 2,
-      name: "Blueberry and Ginger",
+      name: "Blueberry and Ginger (small)",
       description: "Kombucha with organic blueberry and ginger",
       size: "500 ml",
       price: 5.99,
@@ -19,7 +19,7 @@ export default {
     },
     {
       id: 3,
-      name: "Blueberry and Ginger",
+      name: "Blueberry and Ginger (large)",
       description: "Kombucha with organic blueberry and ginger",
       size: "1 litre",
       price: 9.99,
@@ -27,7 +27,7 @@ export default {
     },
     {
       id: 4,
-      name: "Lemon and Ginger",
+      name: "Lemon and Ginger (small)",
       description:
         "Kombucha with organic lemon and ginger, great for summer or winter",
       size: "500 ml",
@@ -36,7 +36,7 @@ export default {
     },
     {
       id: 5,
-      name: "Lemon and Ginger",
+      name: "Lemon and Ginger (large)",
       description:
         "Kombucha with organic lemon and ginger, great for summer or winter",
       size: "1 litre",
@@ -45,7 +45,7 @@ export default {
     },
     {
       id: 6,
-      name: "Chai Blend",
+      name: "Chai Blend (small)",
       description:
         "Kombucha with chai spices, including cinnamon, cardamom and turmeric",
       size: "500 ml",
@@ -54,7 +54,7 @@ export default {
     },
     {
       id: 7,
-      name: "Chai Blend",
+      name: "Chai Blend (large)",
       description:
         "Kombucha with chai spices, including cinnamon, cardamom and turmeric",
       size: "1 litre",
@@ -63,7 +63,7 @@ export default {
     },
     {
       id: 8,
-      name: "Very Berry Booch",
+      name: "Very Berry Booch (limited edition)",
       description:
         "Strawberry and blackberry flavour is a must try, limited edition",
       size: "500 ml",
