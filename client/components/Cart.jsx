@@ -28,38 +28,39 @@ class Cart extends React.Component {
   }
 
   render() {
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Booch</th>
-            <th>Quantity</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.cart.map((item, id) => {
-            return (
-              <CartItem
-                key={id}
-                item={item}
-                update={this.update.bind(this)}
-                deleteFromCart={this.deleteItem.bind(this)}
-              />
-            );
-          })}
-        </tbody>
-      </table>
-      <p>
-        <a href="#" onClick={this.props.keepShopping}>
-          Continue Shopping
-        </a>
-        <button onClick={() => this.props.updateCart(this.state.cart)}>
-          Update
-        </button>
-        <button>Checkout</button>
-      </p>
-    </div>;
+    return (
+      <div>
+        <table className="$table-row-active-background-color $table-color	">
+          <thead>
+            <tr>
+              <th>Booch</th>
+              <th>Quantity</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.cart.map((item, id) => {
+              return (
+                <CartItem
+                  key={id}
+                  item={item}
+                  update={this.update.bind(this)}
+                  deleteFromCart={this.deleteItem.bind(this)}
+                />
+              );
+            })}
+          </tbody>
+        </table>
+        <br />
+        <p className="tile">
+          <a href="#" onClick={this.props.keepShopping}>
+            Continue Shopping
+          </a>
+          {/* <button onClick={() => this.props.updateCart(this.state.cart)} /> */}
+          <a class="button is-success is-rounded">Checkout</a>
+        </p>
+      </div>
+    );
   }
 }
 
