@@ -15,25 +15,40 @@ class BoochList extends Component {
   render() {
     console.log(this.state.kombucha);
     return (
-      <Fragment>
-        {this.state.kombucha.map((item, idx) => {
-          if ((idx - 1) % 3 == 0) {
-            return (
-              <Fragment>
-                {/* <div className="columns"> */}
-                <BoochListItem key={idx} details={item} />
-              </Fragment>
-            );
-          } else if (idx % 3 == 0) {
-            return (
-              <Fragment>
-                <BoochListItem key={idx} details={item} />
-                {/* </div> */}
-              </Fragment>
-            );
-          }
+      // <Fragment>
+      //   {this.state.kombucha.map((item, idx) => {
+      //     if ((idx - 1) % 3 == 0) {
+      //       return (
+      //         <Fragment>
+      //           {/* <div className="columns"> */}
+      //           <BoochListItem key={idx} details={item} />
+      //         </Fragment>
+      //       );
+      //     } else if (idx % 3 == 0) {
+      //       return (
+      //         <Fragment>
+      //           <BoochListItem key={idx} details={item} />
+      //           {/* </div> */}
+      //         </Fragment>
+      //       );
+      //     }
+      //   })}
+      // </Fragment>
+     <div>
+
+    {this.state.kombucha.map((tripple) => {
+      return (
+        <div className='columns'>
+        {tripple.map((item)=> {
+          return (
+            <BoochListItem details={item} />
+          )
         })}
-      </Fragment>
+        </div>
+        )
+    })}
+    
+    </div>
     );
   }
 }

@@ -1,6 +1,6 @@
 export default {
   kombucha: [
-    {
+    [{
       id: 1,
       name: "Coffee Kombucha",
       description:
@@ -24,7 +24,7 @@ export default {
       size: "1 litre",
       price: 9.99,
       image: "/images/kombucha.jpg"
-    },
+    },],[
     {
       id: 4,
       name: "Lemon and Ginger",
@@ -51,7 +51,7 @@ export default {
       size: "500 ml",
       price: 5.99,
       image: "/images/kombucha.jpg"
-    },
+    }],[
     {
       id: 7,
       name: "Chai Blend",
@@ -78,15 +78,5 @@ export default {
       size: "1 litre",
       price: 9.99,
       image: "/images/kombucha.jpg"
-    },
-    {
-      id: 10,
-      name: "Floral Jasmine",
-      description:
-        "Kombucha blended with Jasmine and Green tea, a great alcohol replacement",
-      size: "1 litre",
-      price: 9.99,
-      image: "/images/kombucha.jpg"
-    }
-  ]
+    }]]
 };
