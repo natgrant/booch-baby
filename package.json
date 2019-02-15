@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --watch server & webpack --watch",
     "test": "jest --watchAll",
-    "start": "webpack --watch",
+    "start": "node server",
     "postinstall": "webpack"
   },
   "author": "EDA",
