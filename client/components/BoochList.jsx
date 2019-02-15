@@ -5,6 +5,7 @@ import { addToCart, navigate } from "../actions";
 
 import BoochListItem from "./BoochListItem";
 
+
 const BoochList = props => {
   return (
     <div>
@@ -24,6 +25,7 @@ const BoochList = props => {
     </div>
   );
 };
+
 
 const mapStateToProps = state => {
   return {
