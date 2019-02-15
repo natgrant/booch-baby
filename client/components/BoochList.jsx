@@ -6,52 +6,35 @@ import { addToCart, navigate } from "../actions";
 import BoochListItem from "./BoochListItem";
 
 const BoochList = props => {
-  //   return (
-  //     <div>
-  //       <p>
-  //         Welcome! Please select from our delicious selection and don't hesitate
-  //         to let us know if we can answer any of your questions.
-  //       </p>
-  //       {props.booch.map(item => {
-  //         return (
-  //           <BoochListItem
-  //             key={item.id}
-  //             item={item}
-  //             addToCart={props.addToCart}
-  //           />
-  //         );
-  //       })}
-  //     </div>
-  //   );
-  // };
-
   return (
     <Fragment>
-      {props.booch.map((item, idx) => {
-        if ((idx - 1) % 3 == 0) {
-          return (
-            <Fragment>
-              {/* <div className="columns"> */}
-              <BoochListItem
-                key={item.id}
-                item={item}
-                addToCart={props.addToCart}
-              />
-            </Fragment>
-          );
-        } else if (idx % 3 == 0) {
-          return (
-            <Fragment>
-              <BoochListItem
-                key={item.id}
-                item={item}
-                addToCart={props.addToCart}
-              />
-              {/* </div> */}
-            </Fragment>
-          );
-        }
-      })}
+      <div className="columns shop-list">
+        {props.booch.map((item, idx) => {
+          if ((idx - 1) % 3 == 0) {
+            return (
+              <Fragment>
+                {/* <div className="columns"> */}
+                <BoochListItem
+                  key={item.id}
+                  item={item}
+                  addToCart={props.addToCart}
+                />
+              </Fragment>
+            );
+          } else if (idx % 3 == 0) {
+            return (
+              <Fragment>
+                <BoochListItem
+                  key={item.id}
+                  item={item}
+                  addToCart={props.addToCart}
+                />
+                {/* </div> */}
+              </Fragment>
+            );
+          }
+        })}
+      </div>
     </Fragment>
   );
 };
