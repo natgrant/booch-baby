@@ -21,9 +21,12 @@ h1 {
 
 .shop-list {
   padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .description {
+  flex: 0 0 30%;
   color: $color-shop-font;
 }
 
