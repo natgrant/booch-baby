@@ -56,8 +56,7 @@ class Cart extends React.Component {
           <a href="#" onClick={this.props.keepShopping}>
             Continue Shopping
           </a>
-          {/* <button onClick={() => this.props.updateCart(this.state.cart)} /> */}
-          <a class="button is-success is-rounded">Checkout</a>
+          <a className="button is-success is-rounded">Checkout</a>
         </p>
       </div>
     );

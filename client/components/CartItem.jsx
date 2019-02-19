@@ -1,9 +1,8 @@
-import React from "react";
-
-import boochData from "../../data/booch";
+import React from "react"
+import {connect} from 'react-redux'
 
 const CartItem = props => {
-  const name = getNameFromId(props.item.id);
+  const name = getNameFromId(props.item.id, props.booch);
   return (
     <tr>
       <td>{name}</td>
@@ -13,17 +12,24 @@ const CartItem = props => {
           onChange={e => props.update(props.item.id, e.target.value)}
         />
       </td>
-      <button onClick={() => props.deleteFromCart(props.item.id)}>
-        <span className="delete" />
-      </button>
-      <td />
+      <td>
+        <div onClick={() => props.deleteFromCart(props.item.id)}>
+          <span className="delete" />
+        </div>
+      </td>
     </tr>
   );
 };
 
-function getNameFromId(id) {
-  const booch = boochData.kombucha.find(booch => booch.id === id);
+function getNameFromId(id, boochData) {
+  const booch = boochData.find(booch => booch.id === id);
   return booch.name;
 }
 
-export default CartItem;
+function mapStateToProps(state) {
+  return {
+    booch: state.booch
+  }
+}
+
+export default connect(mapStateToProps)(CartItem)

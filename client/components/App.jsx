@@ -4,16 +4,23 @@ import Header from "./Header";
 import MainNav from "./MainNav";
 import Cart from "./Cart";
 import BoochList from "./BoochList";
+import {fetchBooch} from '../actions'
 
-const App = props => {
-  return (
-    <div className="app">
-      <MainNav />
-      <Header />
-      {/* <BoochList /> */}
-      {props.currentPage === "listing" ? <BoochList /> : <Cart />}
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    this.props.loadBooch()
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <MainNav />
+        <Header />
+        {/* <BoochList /> */}
+        {this.props.currentPage === "listing" ? <BoochList /> : <Cart />}
+      </div>
+    );
+  }
 };
 
 const mapStateToProps = state => {
@@ -22,4 +29,12 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => {
+  return {
+    loadBooch: () => {
+      dispatch(fetchBooch())
+    } 
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
