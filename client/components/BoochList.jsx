@@ -9,31 +9,13 @@ const BoochList = props => {
   return (
     <Fragment>
       <div className="columns shop-list">
-        {props.booch.map((item, idx) => {
-          if ((idx - 1) % 3 == 0) {
-            return (
-              <Fragment>
-                {/* <div className="columns"> */}
-                <BoochListItem
-                  key={item.id}
-                  item={item}
-                  addToCart={props.addToCart}
-                />
-              </Fragment>
-            );
-          } else if (idx % 3 == 0) {
-            return (
-              <Fragment>
-                <BoochListItem
-                  key={item.id}
-                  item={item}
-                  addToCart={props.addToCart}
-                />
-                {/* </div> */}
-              </Fragment>
-            );
-          }
-        })}
+        {props.booch.map((item, idx) => (
+            <BoochListItem
+              key={idx}
+              item={item}
+              addToCart={props.addToCart}
+            />
+        ))}
       </div>
     </Fragment>
   );

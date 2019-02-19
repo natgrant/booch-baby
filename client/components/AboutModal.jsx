@@ -7,7 +7,6 @@ class AboutModal extends Component {
   }
 
   render() {
-    console.log(this.props);
     if (this.props.isShowing) {
       return (
         <div className="modal is-active">
