@@ -29,6 +29,10 @@ class BoochNavbar extends Component {
       e.preventDefault()
       this.props.navigateTo('listing')
     }
+    let navigateCart = (e) => {
+      e.preventDefault()
+      this.props.navigateTo('cart')
+    }
     return (
       <div className="main-nav">
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -66,7 +70,7 @@ class BoochNavbar extends Component {
             <div className="navbar-end">
               <div className="navbar-item">
                 <div className="buttons">
-                  <a className="button is-primary">
+                  <a onClick={navigateCart} className="button is-primary">
                     <strong>My Cart</strong>
                   </a>
                 </div>
