@@ -2,7 +2,7 @@
 
 ## Vision (Why are we building this?)
 
-To solidify our learnings over the past six weeks
+To solidify our learnings over the past six weeks, 1 day to complete
 
 ## Goals
 
@@ -22,9 +22,9 @@ To solidify our learnings over the past six weeks
 
 - [x] Setup boilerplate
 - [x] Commit to GitHub
-- [ ] Deploy to Heroku - https://booch-baby.herokuapp.com/
-- [ ] Create components and reducers
-- [ ] Present to class
+- [x] Deploy to Heroku - https://booch-baby.herokuapp.com/
+- [x] Create components and reducers
+- [x] Present to class
 
 ## Team Composition
 
@@ -34,6 +34,3 @@ To solidify our learnings over the past six weeks
 | Ranjit | Vibes Watcher & Scrum Master |
 | Sam    | Product Owner                |
 
-## Reflections & Learnings
-
-- To be added
