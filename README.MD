@@ -2,7 +2,7 @@
 
 ## Vision (Why are we building this?)
 
-To solidify our learnings over the past six weeks, 1 day to complete
+To solidify our learnings over the past six weeks, 1 day to complete!
 
 ## Goals
 
